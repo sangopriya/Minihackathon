@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Duplicate Value</title>
+    </head>
+    <body>
+        <h2>Duplicate String</h2>
+        <button>Click</button>
+        <div class="Duplicate"></div>
+    </body>
+    <script>
+        button = document.querySelector("button")
+        let name = "decisionminds",count=0
+        var duplicateletters =""
+        output = document.querySelector(".Duplicate")
+      
+        function Duplicatevalue()
+        {
+            for(i=0;i<name.length;i++)
+            {
+                for(j=i+1;j<name.length;j++)
+                {
+                    if(name[i]==name[j] && name[i]!=" ")
+                    {
+                        count++;
+                        name[j]="0";
+                        duplicateletters+= name[i];
+                        console.log(name[i])
+                        output.innerText =`${duplicateletters}`
+                        norepeat = duplicateletters
+                  }
+                }
+            }
+        }
+        button.addEventListener("click", Duplicatevalue)
+    </script>
+</html>

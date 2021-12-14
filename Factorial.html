@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        <h1>Find Zero in Factorial</h1>
+    </body>
+    <script>
+        function findZeros(n)
+        {
+          if(n < 0) 
+              return -1;
+            let count = 0;
+            for (let i = 5;(n / i) >= 1; i *= 5)
+               count +=(n / i);
+               return count;
+        }
+        let n = 20;
+        document.write("Count of zero in  fact number  " + `${n}` + " is " + findZeros(n));
+        </script>
+    
+</html>

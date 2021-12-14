@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DispalyVowels</title>
+</head>
+<body>
+     <div>
+         <h1>Display Vowels</h1>
+         <!-- <input class="findvowel"  value="priyasankar" > </input> -->
+         <div id='vowels'></div>
+         <button  id="calculatevowel">Calculate Vowels </button>
+         <button ><a href="https://github.com/sangopriya/Minihackathon.git">Add</a></button>
+        </div>
+
+        <script>
+            // findvowel = document.querySelectorAll(".findvowel")
+            calculatevowel = document.getElementById("calculatevowel")
+            vowels = document.getElementById("vowels")
+
+            calculatevowel.addEventListener("click", vowel_count)
+            
+            function vowel_count() {
+                var names = 'Priya';
+                var vowels_are = "";
+                var norepeat=0
+                var vowelnames = names.length;
+                var vowel_list = 'aAeEiIoOuU';
+                var len = vowel_list.length;
+                for(i=0;i<vowelnames;i++)
+                 {
+                  for(j=0;j<len;j++)
+                   {
+                    if(names[i]==vowel_list[j])
+                    {
+                      if(names[i]!=norepeat){
+                         vowels_are+= names[i] + " "
+                         vowels.innerText=`The vowels in my name are = ${vowels_are}`
+                         norepeat =names[i]
+                      }
+                    }
+
+                   }
+                 }
+                
+              }
+           
+        </script>
+        
+</body>
+
+</html>

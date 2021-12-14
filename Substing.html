@@ -1,0 +1,19 @@
+<html>
+    <head><title>substring</title>      
+    </head>
+    <body>
+        <h1>Mohana Priya</h1>
+        <button>Click</button>
+        <div class="substrvalue"></div>
+    </body>
+    <script>
+       let button = document.querySelector("button")
+        let name="Mohana Priya"
+        let output = document.querySelector(".substrvalue")
+        function substr()
+        {
+           output.innerText = `${name.substring(6)} `
+        }
+        button.addEventListener("click", substr)
+    </script>
+</html>
